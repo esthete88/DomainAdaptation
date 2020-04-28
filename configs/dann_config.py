@@ -16,18 +16,18 @@ SAVE_MODEL_FREQ = 19
 
 ################### Model dependent parameters #########################
 
-# CLASSES_CNT = 31
-# MODEL_BACKBONE = "alexnet" # alexnet resnet50 vanilla_dann
-# BACKBONE_PRETRAINED = True
-# IMAGE_SIZE = 224
-# DATASET = "office-31"
-# SOURCE_DOMAIN = "amazon"
-# TARGET_DOMAIN = "dslr"
+CLASSES_CNT = 31
+MODEL_BACKBONE = "alexnet" # alexnet resnet50 vanilla_dann
+BACKBONE_PRETRAINED = True
+IMAGE_SIZE = 224
+DATASET = "office-31"
+SOURCE_DOMAIN = "amazon"
+TARGET_DOMAIN = "dslr"
 
-CLASSES_CNT = 10
-MODEL_BACKBONE = "mnist_dann"
-BACKBONE_PRETRAINED = False
-IMAGE_SIZE = 28
-DATASET = "mnist"
-SOURCE_DOMAIN = "mnist"
-TARGET_DOMAIN = "mnist-m"
+# CLASSES_CNT = 10
+# MODEL_BACKBONE = "mnist_dann"
+# BACKBONE_PRETRAINED = False
+# IMAGE_SIZE = 28
+# DATASET = "mnist"
+# SOURCE_DOMAIN = "mnist"
+# TARGET_DOMAIN = "mnist-m"
