@@ -85,7 +85,7 @@ class MNISTM(data.Dataset):
         return os.path.exists(os.path.join(self.root, self.processed_folder, self.training_file)) and os.path.exists(
             os.path.join(self.root, self.processed_folder, self.test_file)
         )
-    
+
     @property
     def class_to_idx(self):
         return {_class: i for i, _class in enumerate(self.classes)}
