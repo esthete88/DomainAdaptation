@@ -23,6 +23,8 @@ class MNISTM(data.Dataset):
     processed_folder = "processed"
     training_file = "mnist_m_train.pt"
     test_file = "mnist_m_test.pt"
+    classes = ['0 - zero', '1 - one', '2 - two', '3 - three', '4 - four',
+               '5 - five', '6 - six', '7 - seven', '8 - eight', '9 - nine']
 
     def __init__(self, root, mnist_root="data", train=True, transform=None, target_transform=None, download=False):
         """Init MNIST-M dataset."""
@@ -83,6 +85,10 @@ class MNISTM(data.Dataset):
         return os.path.exists(os.path.join(self.root, self.processed_folder, self.training_file)) and os.path.exists(
             os.path.join(self.root, self.processed_folder, self.test_file)
         )
+    
+    @property
+    def class_to_idx(self):
+        return {_class: i for i, _class in enumerate(self.classes)}
 
     def download(self):
         """Download the MNIST data."""
