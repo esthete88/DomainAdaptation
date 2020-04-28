@@ -63,18 +63,4 @@ class DANNModel(BaseModel):
         Function for testing process when need to solve only
         target task.
         """
-        return self.forward(input_data)["class"]
-    
-
-class DANNMnistModel(DANNModel):
-    def __init__(self):
-        super(DANNModel, self).__init__()
-        self.features, self.pooling, self.class_classifier, \
-            domain_input_len, self.classifier_before_domain_cnt = backbone_models.get_backbone_model()
-        
-        self.domain_classifier = nn.Sequential(
-            nn.Linear(domain_input_len, 100),
-            nn.BatchNorm1d(100),
-            nn.ReLU(),
-            nn.Linear(100, 1),
-        )  
+        return self.forward(input_data)["class"] 
