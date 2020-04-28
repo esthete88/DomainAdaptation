@@ -1,1 +1,1 @@
-from models.models import DANNModel, DANNMnistModel
+from models.models import DANNModel
