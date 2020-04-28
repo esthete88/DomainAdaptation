@@ -7,7 +7,7 @@ from torchvision import transforms
 
 import configs.dann_config as dann_config
 
-from mnistm_dataset import MNISTM
+from dataloader.mnistm_dataset import MNISTM
 
 
 class Office31Dataset(ImageFolder):
